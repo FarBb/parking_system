@@ -1,6 +1,5 @@
 # Contributing to CodeIgniter
 
-
 CodeIgniter is a community driven project and accepts contributions of code and documentation from the community. These contributions are made in the form of Issues or [Pull Requests](http://help.github.com/send-pull-requests/) on the [CodeIgniter repository](https://github.com/bcit-ci/CodeIgniter) on GitHub.
 
 Issues are a quick way to point out a bug. If you find a bug or documentation error in CodeIgniter then please check a few things first:
@@ -59,7 +58,6 @@ If you are using [Tower](http://www.git-tower.com/) there is a "Sign-Off" checkb
 
 By signing your work in this manner, you certify to a "Developer's Certificate of Origin". The current version of this certificate is in the `DCO.txt` file in the root of this repository.
 
-
 ## How-to Guide
 
 There are two ways to make changes, the easy way and the hard way. Either way you will need to [create a GitHub account](https://github.com/signup/free).
@@ -72,7 +70,7 @@ Hard way The best way to contribute is to "clone" your fork of CodeIgniter to yo
 2. Go to the CodeIgniter repo
 3. Fork it
 4. Clone your CodeIgniter repo: git@github.com:<your-name>/CodeIgniter.git
-5. Checkout the "develop" branch At this point you are ready to start making changes. 
+5. Checkout the "develop" branch At this point you are ready to start making changes.
 6. Fix existing bugs on the Issue tracker after taking a look to see nobody else is working on them.
 7. Commit the files
 8. Push your develop branch to your fork
