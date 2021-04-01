@@ -39,6 +39,7 @@ function getdate() {
     if (m < 10) m = "0" + m;
     if (h < 10) h = "0" + h;
     if (mnth < 10) mnth = "0" + mnth;
+    if (d < 10) d = "0" + d;
     $("#dateTime").val(d + "/" + mnth + "/" + y + " " + h + ":" + m + ":" + s);
 
     setTimeout(function () { getdate() }, 500);
@@ -145,6 +146,9 @@ function hitungBiayaAndJam() {
 
     const rupiah = document.getElementById("biayaAdd");
     rupiah.value = formatRupiah(biaya, "Rp. ");
+
+    const tandaKoma = $('#biayaAdd').val();
+    $('#biayaAdd').val(tandaKoma + ",00");
 }
 
 function formatRupiah(angka, prefix) {
@@ -228,4 +232,7 @@ function hitungBiayaAndJamUp() {
 
     const rupiah = document.getElementById("biayaUp");
     rupiah.value = formatRupiah(biaya, "Rp. ");
+
+    const tandaKoma = $('#biayaUp').val();
+    $('#biayaUp').val(tandaKoma + ",00");
 }

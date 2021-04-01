@@ -19,16 +19,31 @@
     <?php
     $no = 1;
     foreach ($transaksi as $a) : ?>
-    <tr>
-      <th scope="row"><?= $no ?></th>
-      <td><?= $a['KodeTiket'] ?></td>
-      <td><?= $a['JenisKendaraan'] ?></td>
-      <td><?= $a['PlatNo'] ?></td>
-      <td><?= date('d/m/Y  h:i:s', strtotime($a['JamMasuk'])); ?></td>
-      <td></td>
-      <td></td>
-      <td><?= $a['TarifParkir'] ?></td>
-    </tr>
+      <tr>
+        <th scope="row"><?= $no ?></th>
+        <td><?= $a['KodeTiket'] ?></td>
+        <td><?= $a['JenisKendaraan'] ?></td>
+        <td><?= $a['PlatNo'] ?></td>
+        <td><?= date('d/m/Y  h:i:s', strtotime($a['JamMasuk'])); ?></td>
+        <td><?php
+            $tanggal = date('d/m/Y  h:i:s', strtotime($a['JamKeluar']));
+            // die($tanggal);
+            if ($tanggal == '30/11/-0001  12:00:00') {
+              echo '';
+            } else {
+              echo $tanggal;
+            }
+            ?></td>
+        <td><?php
+            $durasi = $a['Durasi'];
+            if ($durasi == '00:00:00') {
+              echo '';
+            } else {
+              echo $durasi;
+            }
+            ?></td>
+        <td><?= $a['TarifParkir'] ?></td>
+      </tr>
     <?php
       $no++;
     endforeach; ?>
